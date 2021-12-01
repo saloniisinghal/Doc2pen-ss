@@ -1,0 +1,27 @@
+@use './../../scss/colors';
+
+.footerDiv {
+	position: relative;
+	margin-top: 1rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.tint {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: colors.$black-thick-tint;
+	}
+	
+	.footerText {
+		text-align: center;
+		color: colors.$white;
+		font-weight: 400;
+		font-size: 1.2rem;
+		padding: 30px;
+		padding-top: 10px;
+	}
+}

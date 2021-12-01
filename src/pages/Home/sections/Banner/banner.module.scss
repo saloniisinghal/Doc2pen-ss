@@ -1,0 +1,129 @@
+@use './../../../../scss/colors';
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+$bg-shade: black;
+$btn-hover-bg: white;
+
+.Home {
+	background-image: url('./../../../../assets/images/v683-aew-05-abstractbackground.jpg') ;
+	background-size:cover;
+	color: colors.$white;
+	height: 85vh;
+	padding: 1rem;
+	padding-top: 3rem;
+
+	.content {
+		display:flex-end;
+		justify-content: flex-end;
+		align-items:flex-end;
+		width: 80%;
+		padding: 1rem 5rem;
+
+		.text {
+			display: flex-end;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: center;
+			width: 60%;
+			text-align: flex-end;
+
+			div {
+				font-family: "Dancing Script", cursive;
+				font-size: 3.5rem;
+			}
+			.button {
+				display: inline-block;
+				padding: 0.75rem 1.25rem;
+				border-radius: 2rem;
+				color: colors.$black;
+				text-transform: uppercase;
+				font-size: 1rem;
+				font-weight: semibold;
+				letter-spacing: 0.15rem;
+				transition: all 0.3s;
+				position: relative;
+				overflow: hidden;
+				cursor: pointer;
+				margin-top: 15px;
+				z-index: 1001;
+				
+				&:hover {
+					color:grey;
+					text-decoration: none;
+
+					&:before {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.image {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 40%;
+			margin-bottom: 1rem;
+
+			img {
+				width: 300px;
+			}
+		}
+	}
+}
+@keyframes animate {
+	0% {
+		background-position-x: 0;
+	}
+	100% {
+		background-position-x: 1000px;
+	}
+}
+
+@keyframes animate2 {
+	0% {
+		background-position-x: 0;
+	}
+	100% {
+		background-position-x: -1000px;
+	}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 970px) {
+	.Home {
+		.content {
+			flex-direction: column-reverse;
+			margin: 0;
+			padding: 0 3rem;
+
+			.text {
+				width: 100%;
+
+				div {
+					font-size: 2.7rem;
+				}
+			}
+			.image img {
+				width: 230px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.Home {
+		.content {
+			flex-direction: column-reverse;
+			margin: 0;
+			padding: 0 3rem;
+			.text {
+				width: 100%;
+				div {
+					font-size: 2.1rem;
+				}
+			}
+			.image img {
+				width: 170px;
+			}
+		}
+	}
+}
